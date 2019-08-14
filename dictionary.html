@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Dictionary</p>
+<p>English :</p>
+<input id="eng" type="text">
+<button type="button" onclick="translate()">Translate</button>
+<p>Việt Nam :</p>
+<input id="viet" type="text">
+
+<script>
+    function translate() {
+        let English = ["cat", "dog", "lion", "tiger"];
+        let Vietnam = ["mèo", "chó", "sư tử", "hổ"];
+        let engword = document.getElementById("eng").value;
+        if (English.indexOf(engword) != -1) {
+            let a = English.indexOf(engword);
+            document.getElementById("viet").value = Vietnam[a];
+        } else {
+            alert("Không có kết quả cho từ bạn muốn tìm kiếm");
+        }
+    }
+</script>
+</body>
+</html>
